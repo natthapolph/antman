@@ -15,15 +15,20 @@ function Example() {
   }, []);
 
   return (
-    <div>
-      <p>{data.name}</p>
+    <div className="Body-regis">
+      <div className="Container-regis">
+        <p>{data.name}</p>
       <div>
-        <h1>Register</h1>
-        <input type="email" placeholder="email@" />
-        <input type="password" placeholder="password" />
-        <input type="password" placeholder="password" />
+        <h2>Register</h2>
+        <input type="text" placeholder="First Name"/>
+        <input type="text" placeholder="Last Name"/>
+        <input type="email" placeholder="Email Adress" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
         <button>submit</button>
       </div>
+      </div>
+      
     </div>
   );
 }
