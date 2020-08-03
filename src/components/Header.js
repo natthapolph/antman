@@ -6,7 +6,7 @@ function Header() {
   const [email, setEmail] = useState("");
   useEffect(() => {
     const handleAuth = auth.onAuthStateChanged((user) => {
-      if (user) {
+      if (user.emailVerified) {
         setStatus(true);
         setEmail(user.email);
       } else {
@@ -59,7 +59,7 @@ function Header() {
                 <Link to="/about">About</Link>
               </li>
               <li>
-                <h1>{email}</h1>
+                <h3>{email}</h3>
               </li>
               <li>
                 <Link to="#" onClick={handleLogout}>
