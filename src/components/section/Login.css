@@ -51,6 +51,23 @@ button {
   align-items: center;
   margin: 10px 0;
 }
+.row-login {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.Res-clk {
+  text-decoration: none;
+  color: blue;
+}
+
+.Forget-clk {
+  color: blue;
+}
 
 .asas {
   margin: 0;

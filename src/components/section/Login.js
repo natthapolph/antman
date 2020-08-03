@@ -19,6 +19,12 @@ function Login() {
 
     const { user } = response;
     console.log(user);
+
+    if (user.emailVerified) {
+    } else {
+      alert("ยืนยันเมลก่อนจ้า");
+    }
+    console.log("emailVerified-->" + user.emailVerified);
   };
 
   return (
@@ -36,9 +42,19 @@ function Login() {
           onChange={handlePassword}
         />
 
-        <Link to="/home" onClick={handleLogin}>
-          Login
+        <Link to="/home">
+          <button onClick={handleLogin}>Login</button>
         </Link>
+        <br />
+        <div className="row-login">
+          <a href="/res" className="Res-clk">
+            Register
+          </a>
+          <a> or </a>
+          <a href="#" className="Forget-clk">
+            forget Password
+          </a>
+        </div>
       </div>
     </div>
   );
